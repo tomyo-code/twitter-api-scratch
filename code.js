@@ -16,7 +16,7 @@ class MyExtension {
 
       // `name` is what the user sees in the toolbox
       // It can be changed without breaking projects.
-      name: 'Twitter extention',
+      name: 'Twitter test extention',
 
       blocks: [
         {
@@ -25,7 +25,12 @@ class MyExtension {
           // It corresponds to the class method with the same name.
           opcode: 'lasttweet',
           blockType: Scratch.BlockType.REPORTER,
-          text: 'Hello, world!'
+          text: 'Last tweet with [id]'
+          arguments: {
+            id: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: ''
+            },
         }
       ]
     };
